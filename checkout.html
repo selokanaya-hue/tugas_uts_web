@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pemesanan - PustakaKode</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="checkout">
+<header class="top">
+  <a class="brand" href="dashboard.html">Pustaka<span>Kode</span></a>
+  <nav aria-label="Menu utama">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="stok.html">Katalog</a>
+    <a href="checkout.html" aria-current="page">Pemesanan</a>
+    <a href="tracking.html">Tracking</a>
+    <button type="button" class="btn alt" id="logout" style="color:#fff;border-color:#fff">Keluar</button>
+  </nav>
+</header>
+<main>
+  <section class="card" aria-labelledby="j1">
+    <h1 id="j1">Pilih buku</h1>
+    <div class="row">
+      <div><label for="pilihBuku">Buku</label><select id="pilihBuku"><option value="">Pilih buku</option></select></div>
+      <div><label for="qty">Jumlah</label><input id="qty" type="number" min="1" value="1"></div>
+    </div>
+    <div class="aksi"><button class="btn" type="button" id="btnTambah">Tambah ke pesanan</button></div>
+  </section>
+  <section class="card" aria-labelledby="j2">
+    <h2 id="j2">Data pemesanan</h2>
+    <p id="kosong" class="hint">Belum ada buku. Pilih buku di atas untuk memulai.</p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th scope="col">Buku</th><th scope="col">Harga</th><th scope="col">Jumlah</th><th scope="col">Subtotal</th><th scope="col">Aksi</th></tr></thead>
+        <tbody id="isiKeranjang"></tbody>
+      </table>
+    </div>
+  </section>
+  <section class="card" aria-labelledby="j3">
+    <h2 id="j3">Data pemesan dan pembayaran</h2>
+    <form id="formPesan" novalidate>
+      <fieldset style="border:0;padding:0;margin:0">
+        <legend class="hint">Informasi pemesan</legend>
+        <div class="row">
+          <div><label for="nama">Nama lengkap</label><input id="nama" name="nama" autocomplete="name"></div>
+          <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
+          <div><label for="telepon">Telepon</label><input id="telepon" name="telepon" type="tel" placeholder="08123456789"></div>
+        </div>
+        <label for="alamat">Alamat pengiriman</label>
+        <textarea id="alamat" name="alamat" rows="3"></textarea>
+      </fieldset>
+      <fieldset style="border:0;padding:0;margin:0">
+        <legend class="hint">Pengiriman dan pembayaran</legend>
+        <div class="row">
+          <div><label for="ekspedisi">Ekspedisi</label>
+            <select id="ekspedisi" name="ekspedisi"><option value="" data-ongkir="0">Pilih ekspedisi</option>
+              <option value="JNE" data-ongkir="15000">JNE (Rp 15.000)</option>
+              <option value="J&T Express" data-ongkir="18000">J&amp;T Express (Rp 18.000)</option>
+              <option value="SiCepat" data-ongkir="12000">SiCepat (Rp 12.000)</option></select></div>
+          <div><label for="paket">Jenis paket</label>
+            <select id="paket" name="paket"><option>Reguler</option><option>Express</option></select></div>
+          <div><label for="bayar">Metode pembayaran</label>
+            <select id="bayar" name="bayar"><option value="">Pilih metode</option><option>Transfer Bank</option><option>E-Wallet</option><option>COD</option></select></div>
+        </div>
+      </fieldset>
+      <p>Subtotal: <b id="subtotal"></b><br>Ongkir: <b id="ongkir"></b><br><span class="total">Total bayar: <b id="total"></b></span></p>
+      <div class="aksi"><button class="btn" type="submit">Pesan sekarang</button></div>
+    </form>
+  </section>
+</main>
+<footer><p>&copy; 2026 PustakaKode - Tugas UTS Pemrograman Web 1</p></footer>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

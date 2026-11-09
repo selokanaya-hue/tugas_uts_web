@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Masuk - PustakaKode</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+<main class="login-wrap">
+  <section class="card login-box" aria-labelledby="jdl">
+    <h1 id="jdl">Pustaka<span>Kode</span></h1>
+    <p>Masuk untuk memesan buku pemrograman.</p>
+    <form id="formLogin" novalidate>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="email" placeholder="nama@email.com">
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" autocomplete="current-password">
+      <div class="aksi"><button class="btn" type="submit">Login</button></div>
+    </form>
+    <div class="aksi">
+      <button class="btn alt" type="button" id="btnLupa">Lupa Password</button>
+      <button class="btn alt" type="button" id="btnDaftar">Daftar</button>
+    </div>
+    <p class="hint">Akun uji: mahasiswa@toko.id / web12345</p>
+  </section>
+</main>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

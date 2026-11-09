@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Katalog - PustakaKode</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="stok">
+<header class="top">
+  <a class="brand" href="dashboard.html">Pustaka<span>Kode</span></a>
+  <nav aria-label="Menu utama">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="stok.html" aria-current="page">Katalog</a>
+    <a href="checkout.html">Pemesanan</a>
+    <a href="tracking.html">Tracking</a>
+    <button type="button" class="btn alt" id="logout" style="color:#fff;border-color:#fff">Keluar</button>
+  </nav>
+</header>
+<main>
+  <section class="card" aria-labelledby="jt">
+    <h1 id="jt">Tambah stok baru</h1>
+    <form id="formStok" novalidate>
+      <div class="row">
+        <div><label for="kode">Kode</label><input id="kode" name="kode" placeholder="BK-007"></div>
+        <div><label for="judul">Judul</label><input id="judul" name="judul"></div>
+        <div><label for="kategori">Kategori</label><input id="kategori" name="kategori"></div>
+        <div><label for="harga">Harga (Rp)</label><input id="harga" name="harga" type="number" min="1"></div>
+        <div><label for="stok">Stok</label><input id="stok" name="stok" type="number" min="0"></div>
+      </div>
+      <div class="aksi"><button class="btn" type="submit">Tambah baris</button></div>
+    </form>
+  </section>
+  <section class="card" aria-labelledby="jk">
+    <h2 id="jk">Katalog buku</h2>
+    <label for="cari">Cari judul, kode, atau kategori</label>
+    <input id="cari" type="search">
+    <p id="ringkas" class="hint" aria-live="polite"></p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th scope="col">Sampul</th><th scope="col">Kode</th><th scope="col">Judul</th><th scope="col">Kategori</th><th scope="col">Harga</th><th scope="col">Stok</th></tr></thead>
+        <tbody id="isiStok"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+<footer><p>&copy; 2026 PustakaKode - Tugas UTS Pemrograman Web 1</p></footer>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

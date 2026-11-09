@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard - PustakaKode</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="dashboard">
+<header class="top">
+  <a class="brand" href="dashboard.html">Pustaka<span>Kode</span></a>
+  <nav aria-label="Menu utama">
+    <a href="dashboard.html" aria-current="page">Dashboard</a>
+    <a href="stok.html">Katalog</a>
+    <a href="checkout.html">Pemesanan</a>
+    <a href="tracking.html">Tracking</a>
+    <button type="button" class="btn alt" id="logout" style="color:#fff;border-color:#fff">Keluar</button>
+  </nav>
+</header>
+<main>
+  <section class="card hero" aria-labelledby="salam">
+    <h1 id="salam"></h1>
+    <p id="jam"></p>
+  </section>
+  <section aria-label="Menu utama" class="menu">
+    <a class="tile" href="stok.html"><strong>Informasi Stok/Katalog</strong><span>Lihat dan tambah stok buku</span></a>
+    <a class="tile" href="tracking.html"><strong>Tracking Pengiriman</strong><span>Cek status dengan nomor DO</span></a>
+    <button class="tile" type="button" id="btnLaporan"><strong>Laporan Pemesanan</strong><span>Ringkasan jumlah dan nilai pesanan</span></button>
+    <button class="tile" type="button" id="btnHistory"><strong>History Transaksi</strong><span>Daftar transaksi sebelumnya</span></button>
+    <a class="tile" href="checkout.html"><strong>Buat Pesanan</strong><span>Pilih buku dan checkout</span></a>
+  </section>
+</main>
+<footer><p>&copy; 2026 PustakaKode - Tugas UTS Pemrograman Web 1</p></footer>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
