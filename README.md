@@ -1,4 +1,4 @@
-# Pustaka Senja: Aplikasi Web Pemesanan Buku
+# PustakaKode: Aplikasi Web Pemesanan Buku
 
 Tugas UTS Pemrograman Web 1
 Nama: Kanaya
