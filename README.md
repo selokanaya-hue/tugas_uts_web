@@ -1,7 +1,7 @@
 # Pustaka Senja: Aplikasi Web Pemesanan Buku
 
 Tugas UTS Pemrograman Web 1
-Nama: Fauzan
+Nama: Kanaya
 
 Aplikasi web sederhana untuk pemesanan buku pada toko online. Aplikasi ini hanya berfokus pada sisi **front-end**. Data tidak diambil dari server atau database, tetapi dari file JavaScript terpisah (`js/data.js`) yang berisi array JSON.
 
